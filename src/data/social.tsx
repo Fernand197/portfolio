@@ -8,7 +8,7 @@ export const socials = [
     },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/fernand-tatchum-27050a202",
+        url: "https://www.linkedin.com/in/fernand-dief-tatchum-27050a202",
         icon: <FaLinkedinIn className="h-6 group-hover:text-white text-blue-700 w-6" />,
     },
     {
