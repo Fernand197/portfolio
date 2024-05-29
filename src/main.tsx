@@ -6,6 +6,7 @@ import i18next from 'i18next'
 import common_en from './translations/en/common.json'
 import common_fr from './translations/fr/common.json'
 import { I18nextProvider } from 'react-i18next'
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 i18next.init({
   lng: "en",
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <I18nextProvider i18n={i18next}>
       <App />
+      <SpeedInsights />
     </I18nextProvider>
   </React.StrictMode>,
 )
