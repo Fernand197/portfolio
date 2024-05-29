@@ -23,7 +23,7 @@ function Layout({ children }: any) {
     return (
         <>
             <Navbar />
-            <div className='grid grid-cols-6 gap-12 py-24 px-4 xl:px-32 2xl:px-56'>
+            <div className='grid grid-cols-6 gap-12 py-24 px-4 xl:px-32 3xl:px-56'>
                 <Sidebar />
                 <div className='col-span-6 xl:col-span-4 xl:mt-32 flex flex-col gap-12'>
                     <div className='shadow-lg dark:shadow-black hidden xl:flex self-end gap-5 bg-white w-auto px-10 py-6 rounded-xl dark:bg-[#111111]'>

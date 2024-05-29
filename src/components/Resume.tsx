@@ -8,7 +8,7 @@ const Resume = () => {
     const { t } = useTranslation()
     return (
         <div className='flex flex-col gap-10 max-xl:p-6 p-10'>
-            <Title>Resume</Title>
+            <Title>{t('Resume')}</Title>
             <div className='grid lg:grid-cols-2 gap-10'>
                 <div className='flex flex-col gap-8'>
                     <span className='capitalize inline-flex gap-4 items-center font-bold text-3xl'>
@@ -17,9 +17,9 @@ const Resume = () => {
                         </span>
                         <span>{t('Education')}</span>
                     </span>
-                    <div className='flex flex-col gap-5'>
+                    <div className='flex flex-col gap-10'>
                         {resume.education.map((edu, i) => (
-                            <div key={i} className='flex flex-col gap-1 border rounded-xl p-6'>
+                            <div key={i} className='flex flex-col bg-slate-100 dark:bg-inherit gap-1 border rounded-xl p-6'>
                                 <span className='font-bold text-xl'>{t(edu.degree)}</span>
                                 <span className='text-neutral-500 font-semibold dark:text-neutral-400 text-left leading-relaxed'>{t(edu.subject)}</span>
                                 <span className='text-neutral-500 dark:text-neutral-400 text-left leading-relaxed'>{t(edu.school)}</span>
@@ -35,9 +35,9 @@ const Resume = () => {
                         </span>
                         <span>{t('Experience')}</span>
                     </span>
-                    <div className='flex flex-col gap-5'>
+                    <div className='flex flex-col gap-10'>
                         {resume.experience.map((exp, i) => (
-                            <div key={i} className='flex flex-col gap-1 border rounded-xl p-6'>
+                            <div key={i} className='flex flex-col bg-slate-100 dark:bg-inherit gap-1 border rounded-xl p-6'>
                                 <span className='font-bold text-xl'>{t(exp.position)}</span>
                                 <span className='text-neutral-500 font-semibold dark:text-neutral-400 text-left leading-relaxed'>{t(exp.company)}</span>
                                 <span className='text-neutral-500 dark:text-neutral-400 text-left leading-relaxed'>{t(exp.location) + ', ' + t("Douala, Cameroon")}</span>
@@ -49,18 +49,18 @@ const Resume = () => {
             </div>
             <div className='grid lg:grid-cols-2 gap-10'>
                 <div className='flex flex-col gap-8'>
-                    <span className='capitalize inline-flex gap-4 items-center font-bold text-3xl'>
-                        <span>{t('Working Skills')}</span>
-                    </span>
-                    <div className="flex flex-wrap gap-3">
-                        {resume.skills.map((skill, i) => (
-                            <div key={i} className='bg-slate-100 dark:bg-neutral-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 flex gap-3 p-6 text-justify border dark:border-slate-800 rounded-xl'>
-                                {skill.icon}
-                            </div>
-                        ))}
+                    <div className='flex flex-col gap-5'>
+                        <span className='capitalize inline-flex gap-4 items-center font-bold text-3xl'>
+                            <span>{t('Working Skills')}</span>
+                        </span>
+                        <div className="flex flex-wrap gap-3">
+                            {resume.skills.map((skill, i) => (
+                                <div key={i} className='bg-slate-100 dark:bg-neutral-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 flex gap-3 p-2 text-justify border dark:border-slate-800 rounded-xl'>
+                                    {skill.icon}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div className='flex flex-col gap-8'>
                     <div className='flex flex-col gap-5'>
                         <span className='capitalize inline-flex gap-4 items-center font-bold text-3xl'>
                             <span>{t('Languages')}</span>
@@ -80,6 +80,21 @@ const Resume = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className='flex flex-col gap-8'>
+
+                    <div className='flex flex-col gap-5'>
+                        <span className='capitalize inline-flex gap-4 items-center font-bold text-3xl'>
+                            <span>{t('Softwares')}</span>
+                        </span>
+                        <div className="flex flex-wrap gap-3">
+                            {resume.softwares.map((soft, i) => (
+                                <div key={i} className='bg-slate-100 dark:bg-neutral-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 flex p-2 text-justify border dark:border-slate-800 rounded-xl'>
+                                    {soft.icon}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                     <div className='flex flex-col gap-5'>
                         <span className='capitalize inline-flex gap-4 items-center font-bold text-3xl'>
                             <span>{t('Personal Skills')}</span>
@@ -92,18 +107,7 @@ const Resume = () => {
                             ))}
                         </div>
                     </div>
-                    <div className='flex flex-col gap-5'>
-                        <span className='capitalize inline-flex gap-4 items-center font-bold text-3xl'>
-                            <span>{t('Softwares')}</span>
-                        </span>
-                        <div className="flex flex-wrap gap-3">
-                            {resume.softwares.map((soft, i) => (
-                                <div key={i} className='bg-slate-100 dark:bg-neutral-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 flex px-4 py-2 text-justify border dark:border-slate-800 rounded-xl'>
-                                    {soft.icon}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

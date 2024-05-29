@@ -10,7 +10,7 @@ const Sidebar = () => {
     return (
         <div className='xl:sticky xl:z-50 top-8 col-span-6 xl:col-span-2 xl:h-screen xl:mb-14'>
             <div className='relative flex items-center rounded-xl justify-center w-full'>
-                <div className='w-56 shadow-lg h-56 top-0 rounded-xl bg-purple-600 z-10 absolute'>
+                <div className='w-56 shadow-lg dark:shadow-black h-56 top-0 rounded-xl bg-purple-600 z-10 absolute'>
                     <img src={profile} alt="" className="w-full h-full rounded-xl object-cover object-center" />
                 </div>
                 <div className='w-full py-10 shadow-lg dark:shadow-black flex-col pt-32 gap-4 mt-32 px-6 flex items-center relative bg-white dark:bg-[#111111] rounded-xl z-0'>
